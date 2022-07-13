@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Player from "./components/Player/Player";
+import SongList from "./components/Player/SongList";
+import songs from "../src/data/songs.json";
+import SongDetail from "./components/Player/SongDetail";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+for(let index = 0; index < songs.length; index++){
+    const song = songs[index];
+    song.id = index; 
 }
+
+const App = () => {
+    return(
+        <React.Fragment>
+            <SongDetail />
+            <SongList songs={songs} />
+            <Player />
+            <a href="#focused" id="focus-link" hidden>
+                Go to playing element
+            </a>
+        </React.Fragment>
+    );
+};
 
 export default App;

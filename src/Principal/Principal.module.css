@@ -1,0 +1,6 @@
+.Header,.Footer{
+    border: 1px solid black;
+    background: red;
+    text-align: center;
+    height: 2em;
+}
