@@ -9,10 +9,6 @@ const SongDetail = ({
 }) => {
   const songData = () => {
     if (selectedSongId >= 0) {
-      return (
-        <>
-        </>
-      );
     } else {
       selectSong(defaultSong);
       return null;

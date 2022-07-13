@@ -1,0 +1,9 @@
+.Music{
+    text-align: center;
+    height: 2em;
+}
+.small-icon{
+    position: absolute;
+    border: 1px solid white;
+    width: 10em;
+}
